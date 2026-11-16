@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Re:Neko | Cat Rescue Malaysia</title>
+<meta name="description" content="Re:Neko is a volunteer-led cat rescue initiative based in Kuala Lumpur, Malaysia. We rescue cats in need, care for them, and connect them with loving forever homes. Adoption and donation info here.">
+<link rel="canonical" href="https://emerald-reef-okinawa.com/reneko-cats/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Yomogi&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/hero-reneko.webp" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="icon" href="favicon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="favicon-180.png">
+<meta property="og:image" content="logo.png">
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="icon-paw" viewBox="0 0 24 24"><ellipse cx="12" cy="16.3" rx="6.3" ry="5.3"/><circle cx="4.7" cy="8.3" r="2.55"/><circle cx="9.8" cy="4.1" r="2.55"/><circle cx="14.6" cy="4.1" r="2.55"/><circle cx="19.4" cy="8.3" r="2.55"/></symbol>
+  <symbol id="icon-book" viewBox="0 0 24 24"><path d="M3 5.4c2.3-1.7 5.7-1.7 9 0c3.3-1.7 6.7-1.7 9 0v14.2c-2.3-1.6-5.7-1.6-9 .1c-3.3-1.7-6.7-1.7-9-.1z"/><path d="M12 5.4v14.3" stroke="#fff" stroke-width="1.3" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="icon-duo" viewBox="0 0 24 24"><circle cx="9" cy="9.2" r="5"/><circle cx="15.4" cy="9.2" r="5" fill-opacity=".72"/><path d="M2.4 21c0-4 3-6.8 6.6-6.8S15.6 17 15.6 21z"/><path d="M8.6 21c0-4 3-6.8 6.6-6.8S21.8 17 21.8 21z" fill-opacity=".72"/></symbol>
+  <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M12 21.3l-1.4-1.3C5.4 15.3 2 12.2 2 8.5C2 5.4 4.4 3 7.5 3c1.7 0 3.4.8 4.5 2.1C13.1 3.8 14.8 3 16.5 3C19.6 3 22 5.4 22 8.5c0 3.7-3.4 6.8-8.6 11.5z"/></symbol>
+  <symbol id="icon-pin" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 1.8c-4.5 0-8 3.4-8 7.8c0 5.4 6 11 7.1 12.1c.5.5 1.3.5 1.8 0C14 20.6 20 15 20 9.6c0-4.4-3.5-7.8-8-7.8zm0 4.4c.9-1 3.8-.8 3.8 1.5c0 1.6-2 3-3.8 4.3C10.2 10.7 8.2 9.3 8.2 7.7c0-2.3 2.9-2.5 3.8-1.5z"/></symbol>
+  <symbol id="icon-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11"/><path fill="#fff" d="M12 17.6l-.8-.7C8 14.1 6 12.3 6 10.1C6 8.3 7.4 7 9.1 7c1 0 2 .5 2.9 1.4C12.9 7.5 13.9 7 14.9 7C16.6 7 18 8.3 18 10.1c0 2.2-2 4-5.200 6.800z"/></symbol>
+  <symbol id="icon-house" viewBox="0 0 24 24"><path d="M12 3.2L21.6 11.3H19v9.1h-5v-6.1h-4v6.1H5v-9.1H2.4z"/><rect x="10.4" y="15.3" width="3.2" height="5.1" fill="#fff"/></symbol>
+</svg>
+
+<header class="site">
+  <div class="site-nav">
+    <a href="#top" class="logo">
+      <img src="logo-120.webp" alt="Re:Neko" width="120" height="120">
+      <small><svg class="icon" viewBox="0 0 24 24"><use href="#icon-paw"></use></svg> CAT RESCUE MALAYSIA</small>
+    </a>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#about" id="nav-about">About</a>
+        <a href="#duo" id="nav-duo">Team</a>
+        <a href="#foster" id="nav-foster">How to Adopt</a>
+        <a href="#donate" id="nav-donate">Donate</a>
+      </nav>
+      <div class="lang-toggle">
+        <button type="button" id="lang-ja" onclick="setLang('ja')">日本語</button>
+        <button type="button" id="lang-en" class="active" onclick="setLang('en')">EN</button>
+      </div>
+      <button type="button" class="menu-toggle" onclick="openMenu()" aria-label="Menu" data-label-en="Menu" data-label-ja="メニュー"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 7h15M4.5 12h15M4.5 17h15" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" onclick="if(event.target===this) closeMenu()">
+  <div class="mobile-menu-panel">
+    <div class="mobile-menu-head">
+      <a href="#top" class="logo"><img src="logo-120.webp" alt="Re:Neko" width="120" height="120"></a>
+      <button type="button" class="mobile-menu-close" onclick="closeMenu()" aria-label="Close" data-label-en="Close" data-label-ja="閉じる">×</button>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="#about" onclick="closeMenu()"><span class="m-icon"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-book"></use></svg></span><span id="mnav-about">About</span></a>
+      <a href="#duo" onclick="closeMenu()"><span class="m-icon"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-duo"></use></svg></span><span id="mnav-duo">Team</span></a>
+      <a href="#foster" onclick="closeMenu()"><span class="m-icon"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-house"></use></svg></span><span id="mnav-foster">How to Adopt</span></a>
+      <a href="#donate" onclick="closeMenu()"><span class="m-icon"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-heart"></use></svg></span><span id="mnav-donate">Donate</span></a>
+    </div>
+    <svg class="mobile-menu-paw" viewBox="0 0 24 24"><use href="#icon-paw"></use></svg>
+  </div>
+</div>
+
+<div id="top"></div>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-photo-top">
+      <img src="images/hero-reneko.webp" alt="Re:Neko Cat Rescue Malaysia - a rescued kitten" data-alt-en="Re:Neko Cat Rescue Malaysia - a rescued kitten" data-alt-ja="Re:Neko Cat Rescue Malaysia - 保護された子猫" width="1520" height="890" fetchpriority="high" decoding="async">
+      <span class="photo-caption" id="hero-bubble">Waiting for a home</span>
+    </div>
+    <div class="hero-text">
+      <h1 id="hero-h1">A second chance<br>at a happy life.</h1>
+      <p id="hero-p">Re:Neko is a volunteer-led cat rescue initiative based in Kuala Lumpur, Malaysia.<br>We rescue cats in need, care for them, and connect them with loving forever homes.<br>Through Rescue, Rehome &amp; Return, we strive to give every cat a safer, happier future.</p>
+      <div class="hero-badges">
+        <span class="badge"><span class="b-icon"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-pin"></use></svg></span><span id="badge-location">Kuala Lumpur</span></span>
+        <span class="badge"><span class="b-icon"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-heart"></use></svg></span><span id="badge-volunteer">Volunteer-based</span></span>
+      </div>
+    </div>
+    <div class="quick-links">
+      <a class="quick-card qc-find" href="https://secure.petfinder.my/mobile/?action=list&amp;sortadopt=9&amp;sortuser=Sara877" target="_blank" rel="noopener">
+        <img src="images/card-find-base.webp" alt="" width="812" height="792">
+        <span class="qc-title" id="qc-find-title">Find Your<br>Family Cat</span>
+        <span class="qc-btn" id="qc-find-btn">See on PetFinder <span class="qc-arrow">→</span></span>
+      </a>
+      <a class="quick-card qc-support" href="#bank">
+        <img src="images/card-support-base.webp" alt="" width="811" height="792">
+        <span class="qc-title" id="qc-support-title">Support<br>Our Cats</span>
+        <span class="qc-btn" id="qc-support-btn">Donate <span class="qc-arrow">→</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-title">
+      <span class="eyebrow">ABOUT</span>
+      <h2 id="about-h2">What We Do</h2>
+      <p id="about-p">Rescue, Rehome &amp; Return &mdash; three values at the heart of everything we do for every single cat.</p>
+    </div>
+    <div class="about-list">
+      <article class="about-item">
+        <div class="about-photo"><img src="photos/about-rescue.webp" alt="Rescued kittens in a cardboard box" data-alt-en="Rescued kittens in a cardboard box" data-alt-ja="段ボール箱の中のレスキューした子猫たち" width="720" height="720" loading="lazy" decoding="async"></div>
+        <div class="about-body">
+          <span class="about-num" aria-hidden="true">01</span>
+          <h3 id="about-rescue-h3">Rescue</h3>
+          <p id="about-rescue-p">We rescue stray and abandoned cats within our means. As a small team, we may not be able to take in cases needing intensive medical care, and encourage reaching out to larger organizations when needed.</p>
+        </div>
+      </article>
+      <article class="about-item">
+        <div class="about-photo"><img src="photos/about-rehome.webp" alt="Two cats waiting for a family, cuddled together" data-alt-en="Two cats waiting for a family, cuddled together" data-alt-ja="寄り添って里親を待つ2匹の猫" width="720" height="720" loading="lazy" decoding="async"></div>
+        <div class="about-body">
+          <span class="about-num" aria-hidden="true">02</span>
+          <h3 id="about-rehome-h3">Rehome</h3>
+          <p id="about-rehome-p">We find loving homes for rescued cats, so they can enjoy warm beds, full meals, and the comfort they deserve! Please refer to &ldquo;Adoption Process&rdquo; for more information.</p>
+        </div>
+      </article>
+      <article class="about-item">
+        <div class="about-photo"><img src="photos/about-return.webp" alt="A community cat sitting on concrete steps" data-alt-en="A community cat sitting on concrete steps" data-alt-ja="コンクリートの階段に座る地域猫" width="720" height="720" loading="lazy" decoding="async"></div>
+        <div class="about-body">
+          <span class="about-num" aria-hidden="true">03</span>
+          <h3 id="about-return-h3">Return</h3>
+          <p id="about-return-p">We carry out Trap-Neuter-Return (TNR), helping control the stray population humanely while improving the cats&rsquo; quality of life.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="duo">
+  <div class="wrap">
+    <div class="section-title">
+      <span class="eyebrow">MEET THE DUO</span>
+      <h2>Riko &amp; Rina</h2>
+    </div>
+    <div class="duo-card">
+      <div class="duo-photo"><img src="photos/duo-founders.webp" alt="Riko and Rina with a rescued cat" data-alt-en="Riko and Rina with a rescued cat" data-alt-ja="Riko と Rina、そして保護猫" width="480" height="480" loading="lazy" decoding="async"></div>
+      <div class="duo-text">
+        <p id="duo-p1">We are two hearts on a mission to Rescue, Rehome, and Return cats in Kuala Lumpur, Malaysia.</p>
+        <p id="duo-p2">Whether we&rsquo;re finding forever homes or managing community colonies through TNR, everything we do is driven by our personal love for cats.</p>
+        <p id="duo-p3">It&rsquo;s just the two of us for now, fueled by a lot of kitty cuddles. Thank you for being part of our journey!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="foster">
+  <div class="wrap">
+    <div class="section-title">
+      <span class="eyebrow">ADOPTION PROCESS</span>
+      <h2 id="foster-h2">Become a Foster / Adopter</h2>
+      <p id="foster-p">Here&rsquo;s how the process works.<br>We&rsquo;d love to hear from you.</p>
+    </div>
+    <div class="accent-photo-row accent-wide">
+      <div class="pop-wrap">
+        <div class="accent-photo">
+        <img src="photos/foster-tuxedo.webp" alt="A kitten reaching out a paw" data-alt-en="A kitten reaching out a paw" data-alt-ja="手を伸ばす子猫" width="803" height="535" loading="lazy" decoding="async">
+        <svg class="motion-lines" viewBox="0 0 100 80" aria-hidden="true"><path d="M18 6 L10 30"/><path d="M48 18 L28 40"/><path d="M80 44 L46 54"/></svg>
+      </div>
+        <img class="cat-pop" src="photos/foster-tuxedo-pop.webp" alt="" aria-hidden="true" width="803" height="160" loading="lazy" decoding="async">
+      </div>
+      <div class="accent-text">
+        <h3 id="foster-accent-h3">Someone&rsquo;s next best friend</h3>
+        <p id="foster-accent-p">These cats are waiting for a home just like yours.</p>
+      </div>
+    </div>
+    <div class="foster-steps">
+      <div class="step">
+        <div class="num">1</div>
+        <p><strong id="step1-strong">Check out our cats on Instagram</strong><span id="step1-text">See who&rsquo;s currently looking for a home in our &ldquo;ADOPT ME!&rdquo; highlight.</span></p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <p><strong id="step2-strong">Fill out the form below</strong><span id="step2-text">Submit our Adoption Application Form below, and drop us a DM on Instagram too.</span></p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <p><strong id="step3-strong">Meet & Greet</strong><span id="step3-text">We&rsquo;ll arrange an in-person meet &amp; greet with the cat.</span></p>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <p><strong id="step4-strong">Adoption Agreement & Donation</strong><span id="step4-text">Along with the agreement, we ask for a donation toward medical costs.</span><a class="step-link" id="step4-link" href="docs/ReNeko-Adoption-Agreement.pdf" target="_blank" rel="noopener">Read the agreement (PDF)</a></p>
+      </div>
+      <div class="step">
+        <div class="num">5</div>
+        <p><strong id="step5-strong">Welcome Home</strong><span id="step5-text">Bring your new furry family member home!</span></p>
+      </div>
+    </div>
+    <p class="donate-note" id="foster-donate-note">※ All donations go toward TNR or medical treatments. Amounts vary by treatment, typically from RM300.</p>
+
+    <div class="agreement-row">
+      <a class="agreement-link" href="docs/ReNeko-Adoption-Agreement.pdf" target="_blank" rel="noopener"><span class="h-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-book"></use></svg></span><span id="agr-btn">Read the Adoption Agreement (PDF)</span></a>
+    </div>
+
+    <div class="form-wrap">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdKfVK2Zg6W_bl4a3MCozu04Es1ObIp1oDFWFUNA1SaIlgtjA/viewform?embedded=true" title="Adoption application form" data-label-en="Adoption application form" data-label-ja="里親応募フォーム" loading="lazy">Loading…</iframe>
+    </div>
+    <div class="form-fallback">
+      <a class="btn btn-outline" href="https://docs.google.com/forms/d/e/1FAIpQLSdKfVK2Zg6W_bl4a3MCozu04Es1ObIp1oDFWFUNA1SaIlgtjA/viewform" target="_blank" rel="noopener" id="form-fallback-link">If the form doesn&rsquo;t load, open it in a new tab</a>
+    </div>
+  </div>
+</section>
+
+<section id="donate">
+  <div class="donate-section paw-texture">
+    <div class="donate-inner">
+      <div class="section-title">
+        <span class="eyebrow">DONATION</span>
+        <h2 id="donate-h2">Support Our Work</h2>
+        <p id="donate-p">Every rescued cat&rsquo;s medical care, milk, food, and spay/neuter surgery is made possible by your donations.</p>
+      </div>
+      <div class="accent-photo-row">
+        <div class="accent-photo">
+          <img src="photos/donate-vet.webp" alt="A kitten receiving care at a vet clinic" data-alt-en="A kitten receiving care at a vet clinic" data-alt-ja="動物病院でケアを受ける子猫" width="400" height="400" loading="lazy" decoding="async">
+        </div>
+        <div class="accent-text">
+          <h3 id="donate-accent-h3">One gift from you</h3>
+          <p id="donate-accent-p">can mean a vaccine, a few days of food, or a warm place to sleep. Any amount truly makes a difference for these cats.</p>
+        </div>
+      </div>
+      <div class="donate-card" id="bank">
+        <h3><span class="h-icon"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-coin"></use></svg></span><span id="donate-card-h3">Donate by Bank Transfer</span></h3>
+        <p id="donate-card-p">We&rsquo;d be grateful for a transfer to the account below. Any amount is warmly welcomed.</p>
+        <div class="bank-box">
+          <dl>
+            <div class="bank-row"><dt id="bank-label-name">Bank</dt><dd><span id="bank-value-name">HSBC Amanah Malaysia Berhad</span><button type="button" class="copy-btn" data-copy="bank-value-name" data-ja="コピー" data-en="Copy" data-done-ja="コピーしました" data-done-en="Copied!">Copy</button></dd></div>
+            <div class="bank-row"><dt id="bank-label-number">Account Number</dt><dd><span id="bank-value-number">037-117488-888</span><button type="button" class="copy-btn" data-copy="bank-value-number" data-ja="コピー" data-en="Copy" data-done-ja="コピーしました" data-done-en="Copied!">Copy</button></dd></div>
+            <div class="bank-row"><dt id="bank-label-holder">Account Holder</dt><dd><span id="bank-value-holder">Riko Miyauchi</span><button type="button" class="copy-btn" data-copy="bank-value-holder" data-ja="コピー" data-en="Copy" data-done-ja="コピーしました" data-done-en="Copied!">Copy</button></dd></div>
+            <div class="bank-row"><dt id="bank-label-swift">SWIFT/BIC (International Transfer)</dt><dd><span id="bank-value-swift">HMABMYKL</span><button type="button" class="copy-btn" data-copy="bank-value-swift" data-ja="コピー" data-en="Copy" data-done-ja="コピーしました" data-done-en="Copied!">Copy</button></dd></div>
+          </dl>
+          <span class="sr-only" id="copy-status" role="status" aria-live="polite"></span>
+        </div>
+        <p class="donate-alt" id="donate-alt">Questions? Feel free to reach us via <a href="https://www.instagram.com/reneko_malaysia/" target="_blank" rel="noopener">Instagram DM</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="#top" class="logo"><img src="logo-120.webp" alt="Re:Neko" width="120" height="120"> <small><svg class="icon" viewBox="0 0 24 24"><use href="#icon-paw"></use></svg> CAT RESCUE MALAYSIA</small></a>
+    <p class="foot-contact" id="footer-contact">For inquiries, please contact us on <a href="https://www.instagram.com/reneko_malaysia/" target="_blank" rel="noopener">Instagram</a></p>
+    <p class="copyright">© Re:Neko Cat Rescue Malaysia</p>
+  </div>
+</footer>
+
+<div class="fixed-bar">
+  <a href="https://www.instagram.com/reneko_malaysia/" class="fb-insta" target="_blank" rel="noopener" aria-label="Instagram @reneko_malaysia">
+    <img src="images/insta-cat.webp" alt="" width="200" height="249">
+    <span class="fb-label">Follow Me</span>
+  </a>
+</div>
+
+<script>
+const I18N = {
+  'nav-about':        { ja:'about',            en:'About' },
+  'nav-duo':          { ja:'メンバー',          en:'Team' },
+  'nav-donate':       { ja:'寄付',              en:'Donate' },
+  'nav-foster':       { ja:'応募方法',          en:'How to Adopt' },
+  'mnav-about':       { ja:'about',            en:'About' },
+  'mnav-duo':         { ja:'メンバー',          en:'Team' },
+  'mnav-donate':      { ja:'寄付',              en:'Donate' },
+  'mnav-foster':      { ja:'応募方法',          en:'How to Adopt' },
+  'hero-bubble':      { ja:'おうち、まってます', en:'Waiting for a home' },
+
+  'hero-h1':          { ja:'小さな命に、<br>もう一度おうちを。', en:'A second chance<br>at a happy life.' },
+  'hero-p':           { ja:'Re:Neko(リネコ)は、マレーシア・クアラルンプールを拠点に活動する保護猫ボランティア団体です。行き場のない猫たちをレスキューし、大切に育て、温かい里親さんへとつなぐ「Rescue, Rehome &amp; Return」を合言葉に活動しています。',
+                          en:'Re:Neko is a volunteer-led cat rescue initiative based in Kuala Lumpur, Malaysia.<br>We rescue cats in need, care for them, and connect them with loving forever homes.<br>Through Rescue, Rehome &amp; Return, we strive to give every cat a safer, happier future.' },
+  'badge-location':   { ja:'Kuala Lumpur',   en:'Kuala Lumpur' },
+  'badge-volunteer':  { ja:'ボランティアベース', en:'Volunteer-based' },
+
+  'about-h2':         { ja:'Re:Neko の活動について', en:'What We Do' },
+  'about-p':          { ja:'Rescue, Rehome &amp; Return — 3つのRを大切に、一匹一匹の命と向き合っています。', en:'Rescue, Rehome &amp; Return &mdash; three values at the heart of everything we do for every single cat.' },
+  'about-rescue-h3':  { ja:'Rescue（保護）', en:'Rescue' },
+  'about-rescue-p':   { ja:'できる範囲で、野良猫や行き場のない猫たちをレスキューしています。私たちは小さなチームのため、集中的な医療ケアが必要なケースは、より大きな保護団体への相談をお願いする場合もあります。',
+                          en:'We rescue stray and abandoned cats within our means. As a small team, we may not be able to take in cases needing intensive medical care, and encourage reaching out to larger organizations when needed.' },
+  'about-rehome-h3':  { ja:'Rehome（里親探し）', en:'Rehome' },
+  'about-rehome-p':   { ja:'保護した猫たちに、あたたかいベッドと十分なごはん、そして愛情を感じられる新しい家族を見つけます。詳しい流れは「里親になりたい方へ」をご覧ください。',
+                          en:'We find loving homes for rescued cats, so they can enjoy warm beds, full meals, and the comfort they deserve! Please refer to &ldquo;Adoption Process&rdquo; for more information.' },
+  'about-return-h3':  { ja:'Return（地域へ）', en:'Return' },
+  'about-return-p':   { ja:'TNR（不妊去勢・地域へのリターン）活動を行い、地域猫たちの数を人道的にコントロールしながら、暮らしの質の向上にも取り組んでいます。',
+                          en:'We carry out Trap-Neuter-Return (TNR), helping control the stray population humanely while improving the cats&rsquo; quality of life.' },
+
+  'duo-p1':           { ja:'マレーシア・クアラルンプールで、猫たちの Rescue・Rehome・Return に取り組む、2人の想いから始まった団体です。',
+                          en:'We are two hearts on a mission to Rescue, Rehome, and Return cats in Kuala Lumpur, Malaysia.' },
+  'duo-p2':           { ja:'里親探しも、TNRによる地域猫のお世話も、すべては猫への純粋な愛情が原動力になっています。',
+                          en:'Whether we&rsquo;re finding forever homes or managing community colonies through TNR, everything we do is driven by our personal love for cats.' },
+  'duo-p3':           { ja:'今はまだ2人だけの小さな活動ですが、たくさんの猫たちとのふれあいに支えられています。いつも見守ってくださり、ありがとうございます。',
+                          en:'It&rsquo;s just the two of us for now, fueled by a lot of kitty cuddles. Thank you for being part of our journey!' },
+
+
+
+  'donate-h2':        { ja:'寄付のお願い', en:'Support Our Work' },
+  'donate-p':         { ja:'保護した猫たちの医療費・ミルク・ごはん・不妊去勢手術などの活動費は、皆さまからのご寄付によって支えられています。',
+                          en:'Every rescued cat&rsquo;s medical care, milk, food, and spay/neuter surgery is made possible by your donations.' },
+  'donate-accent-h3': { ja:'あなたの1回のご寄付が', en:'One gift from you' },
+  'donate-accent-p':  { ja:'ワクチン1本、ごはん数日分、あたたかい寝床になります。どんな金額でも、確かに猫たちの力になっています。',
+                          en:'can mean a vaccine, a few days of food, or a warm place to sleep. Any amount truly makes a difference for these cats.' },
+  'qc-find-title':    { ja:'家族になる<br>猫を探す', en:'Find Your<br>Family Cat' },
+  'qc-support-title': { ja:'猫を助ける<br>支援をする', en:'Support<br>Our Cats' },
+  'qc-find-btn':      { ja:'PetFinderで見る <span class="qc-arrow">→</span>', en:'See on PetFinder <span class="qc-arrow">→</span>' },
+  'qc-support-btn':   { ja:'寄付の口座へ <span class="qc-arrow">→</span>', en:'Donate <span class="qc-arrow">→</span>' },
+  'donate-card-h3':   { ja:'銀行振込でのご寄付', en:'Donate by Bank Transfer' },
+  'donate-card-p':    { ja:'下記口座宛にお振込みいただけますと幸いです。金額は問いません、温かいご支援をお待ちしております。', en:'We&rsquo;d be grateful for a transfer to the account below. Any amount is warmly welcomed.' },
+  'bank-label-name':  { ja:'銀行名', en:'Bank' },
+  'bank-label-number':{ ja:'口座番号', en:'Account Number' },
+  'bank-label-holder':{ ja:'口座名義人', en:'Account Holder' },
+  'bank-value-name':  { ja:'HSBC Amanah Malaysia Berhad', en:'HSBC Amanah Malaysia Berhad' },
+  'bank-value-number':{ ja:'037-117488-888', en:'037-117488-888' },
+  'bank-value-holder':{ ja:'Riko Miyauchi', en:'Riko Miyauchi' },
+  'bank-label-swift': { ja:'SWIFT/BIC（海外送金）', en:'SWIFT/BIC (International Transfer)' },
+  'bank-value-swift': { ja:'HMABMYKL', en:'HMABMYKL' },
+  'donate-alt':       { ja:'ご不明な点は <a href="https://www.instagram.com/reneko_malaysia/" target="_blank" rel="noopener">InstagramのDM</a> よりお気軽にお問い合わせください。',
+                          en:'Questions? Feel free to reach us via <a href="https://www.instagram.com/reneko_malaysia/" target="_blank" rel="noopener">Instagram DM</a>.' },
+
+  'foster-h2':        { ja:'里親になりたい方へ', en:'Become a Foster / Adopter' },
+  'foster-p':         { ja:'下記の流れでお申し込みいただけます。<br>まずはお気軽にご応募ください。', en:'Here&rsquo;s how the process works.<br>We&rsquo;d love to hear from you.' },
+  'foster-accent-h3': { ja:'誰かの家族の、大切な一匹に', en:'Someone&rsquo;s next best friend' },
+  'foster-accent-p':  { ja:'あなたのおうちに迎えられることを、この子たちは待っています。', en:'These cats are waiting for a home just like yours.' },
+  'step1-strong':     { ja:'Instagramで猫をチェック', en:'Check out our cats on Instagram' },
+  'step1-text':       { ja:'ハイライト「ADOPT ME!」で、里親募集中の猫たちをご覧ください。', en:'See who&rsquo;s currently looking for a home in our &ldquo;ADOPT ME!&rdquo; highlight.' },
+  'step2-strong':     { ja:'下記フォームからお申し込み', en:'Fill out the form below' },
+  'step2-text':       { ja:'里親応募フォームをご入力の上、送信し、InstagramのDMもお送りください。', en:'Submit our Adoption Application Form below, and drop us a DM on Instagram too.' },
+  'step3-strong':     { ja:'対面での顔合わせ', en:'Meet & Greet' },
+  'step3-text':       { ja:'猫との相性を見るため、実際に会っていただきます。', en:'We&rsquo;ll arrange an in-person meet &amp; greet with the cat.' },
+  'step4-strong':     { ja:'里親契約・ご寄付', en:'Adoption Agreement & Donation' },
+  'step4-text':       { ja:'契約と合わせて、医療費等へのご寄付をお願いしています。', en:'Along with the agreement, we ask for a donation toward medical costs.' },
+  'step5-strong':     { ja:'お迎え', en:'Welcome Home' },
+  'step5-text':       { ja:'新しい家族の一員として、おうちへお迎えいただきます。', en:'Bring your new furry family member home!' },
+  'foster-donate-note': { ja:'※ ご寄付はTNRや医療費として大切に使わせていただきます。金額は治療内容により異なりますが、目安はRM300〜です。',
+                          en:'※ All donations go toward TNR or medical treatments. Amounts vary by treatment, typically from RM300.' },
+  'agr-btn': { ja:'譲渡同意書（PDF）を読む', en:'Read the Adoption Agreement (PDF)' },
+  'step4-link': { ja:'同意書（PDF）を読む', en:'Read the agreement (PDF)' },
+  'form-fallback-link': { ja:'フォームが表示されない場合はこちら（新しいタブで開く）', en:'If the form doesn&rsquo;t load, open it in a new tab' },
+
+  'footer-contact':   { ja:'お問い合わせは<a href="https://www.instagram.com/reneko_malaysia/" target="_blank" rel="noopener">Instagram</a>まで', en:'For inquiries, please contact us on <a href="https://www.instagram.com/reneko_malaysia/" target="_blank" rel="noopener">Instagram</a>' },
+};
+
+const META = {
+  ja:{ title:'Re:Neko | 保護猫ボランティア（クアラルンプール）', desc:'Re:Neko(リネコ)はマレーシア・クアラルンプールを拠点に活動する保護猫ボランティア団体です。レスキュー・保護・里親探しを行っています。里親募集・ご寄付はこちらから。' },
+  en:{ title:'Re:Neko | Cat Rescue Malaysia', desc:'Re:Neko is a volunteer-led cat rescue initiative based in Kuala Lumpur, Malaysia. We rescue cats in need, care for them, and connect them with loving forever homes. Adoption and donation info here.' }
+};
+
+function setLang(lang, remember = true){
+  document.documentElement.lang = lang;
+  for(const id in I18N){
+    const el = document.getElementById(id);
+    if(el) el.innerHTML = I18N[id][lang];
+  }
+  const L = lang === 'ja' ? 'Ja' : 'En';
+  document.querySelectorAll('[data-alt-en]').forEach(el => { el.alt = el.dataset['alt' + L]; });
+  document.querySelectorAll('[data-label-en]').forEach(el => {
+    const v = el.dataset['label' + L];
+    if(el.tagName === 'IFRAME') el.title = v; else el.setAttribute('aria-label', v);
+  });
+  document.querySelectorAll('[data-ja][data-en]').forEach(el => { el.textContent = el.dataset[lang]; });
+  document.title = META[lang].title;
+  document.querySelector('meta[name=description]').setAttribute('content', META[lang].desc);
+  document.getElementById('lang-ja').classList.toggle('active', lang === 'ja');
+  document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+  if(remember){ try{ localStorage.setItem('reneko-lang-v2', lang); }catch(e){} }
+}
+
+/* Copy bank details */
+function copyFallback(text){
+  return new Promise((resolve, reject) => {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;top:-100px;opacity:0';
+    document.body.appendChild(ta); ta.select();
+    let ok = false;
+    try{ ok = document.execCommand('copy'); }catch(e){}
+    document.body.removeChild(ta);
+    ok ? resolve() : reject();
+  });
+}
+function copyText(text){
+  if(navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(text).catch(() => copyFallback(text));
+  }
+  return copyFallback(text);
+}
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.copy-btn');
+  if(!btn) return;
+  const text = document.getElementById(btn.dataset.copy).textContent.trim();
+  copyText(text).then(() => {
+    const lang = document.documentElement.lang === 'ja' ? 'ja' : 'en';
+    btn.textContent = btn.dataset['done' + (lang === 'ja' ? 'Ja' : 'En')];
+    btn.classList.add('done');
+    document.getElementById('copy-status').textContent = btn.textContent + ': ' + text;
+    clearTimeout(btn._t);
+    btn._t = setTimeout(() => {
+      btn.textContent = btn.dataset[document.documentElement.lang === 'ja' ? 'ja' : 'en'];
+      btn.classList.remove('done');
+    }, 1800);
+  }).catch(() => {});
+});
+
+(function(){
+  let lang = 'en';
+  try{ lang = localStorage.getItem('reneko-lang-v2') || 'en'; }catch(e){}
+  setLang(lang, false);
+})();
+
+function openMenu(){
+  document.getElementById('mobile-menu').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeMenu(){
+  document.getElementById('mobile-menu').classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+
+</body>
+</html>
